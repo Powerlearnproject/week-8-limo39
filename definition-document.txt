@@ -1,0 +1,55 @@
+PART 1
+
+SDG Problem Definition Document
+Project Title: Chronic Disease Management System for Diabetes
+
+SDG Focus: SDG 3: Good Health and Well-being
+
+1. Overview of SDG 3: Good Health and Well-being
+Sustainable Development Goal 3 (SDG 3) aims to ensure healthy lives and promote well-being for all at all ages. This goal addresses major health issues, including reducing maternal and child mortality, combating epidemics, and promoting mental health. One critical area under SDG 3 is the management of chronic diseases, which significantly impacts individuals' quality of life and healthcare systems globally.
+
+2. Problem Definition
+Specific Problem: Ineffective management of chronic disease follow-ups and treatment adherence, particularly for diabetes patients.
+
+Background:
+
+Diabetes is a chronic health condition that requires continuous monitoring and management to prevent complications and ensure optimal health. Effective diabetes management involves regular monitoring of blood glucose levels, adherence to medication schedules, and consistent follow-up with healthcare providers.
+
+Challenges:
+
+Inconsistent Monitoring: Patients often struggle with tracking their blood glucose levels regularly, leading to suboptimal disease management.
+Medication Adherence: Non-adherence to prescribed medication regimens is common, which can exacerbate the condition and lead to severe complications.
+Appointment Management: Patients may miss follow-up appointments, reducing the effectiveness of ongoing care and monitoring.
+Data Integration: Fragmented health data across various sources can lead to inefficient management and lack of personalized care.
+Impact:
+
+Health Outcomes: Poor management of diabetes can result in severe health complications such as cardiovascular diseases, kidney failure, and vision loss.
+Healthcare Costs: Ineffective disease management can increase healthcare costs due to hospitalizations and emergency care.
+Quality of Life: Patients may experience a decreased quality of life due to uncontrolled symptoms and complications.
+3. Objective
+To address these challenges, we propose the development of a Chronic Disease Management System (CDMS) for diabetes patients. This system will utilize a relational database to efficiently manage patient data, monitor key health metrics, and enhance treatment adherence.
+
+Key Objectives:
+
+Centralized Data Management: Create a centralized database to store comprehensive patient profiles, medical records, medication details, and appointment schedules.
+Real-Time Monitoring: Implement mechanisms to track and record blood glucose levels, medication adherence, and other relevant health metrics.
+Improved Adherence: Generate alerts and reminders for medication intake and upcoming appointments to enhance patient adherence.
+Data-Driven Insights: Analyze data to provide insights into treatment effectiveness and identify areas for improvement in patient care.
+4. Scope
+Entities Covered:
+
+Patient: Basic information and contact details.
+Medical Record: Historical data including blood glucose levels, blood pressure, and notes from medical visits.
+Medication: Details of prescribed medications, including dosage and duration.
+Appointment: Scheduled follow-ups with healthcare providers.
+Alert: Notifications related to medication schedules and appointments.
+System Features:
+
+Database Management: A structured database for storing and retrieving patient data.
+Alerts and Reminders: Automated notifications for medication and appointment schedules.
+Reports and Analytics: Tools for generating reports on patient data and analyzing trends.
+5. Expected Benefits
+Enhanced Patient Care: By centralizing patient data and providing real-time monitoring, healthcare providers can offer more personalized and effective care.
+Increased Adherence: Automated reminders and alerts can improve patient adherence to treatment plans and appointment schedules.
+Data-Driven Decisions: Healthcare providers can use data analytics to optimize treatment plans and address common issues.
+Efficient Management: Streamlined data management reduces administrative burdens and improves overall efficiency in chronic disease management.

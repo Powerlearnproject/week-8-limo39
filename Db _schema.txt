@@ -1,0 +1,47 @@
+--Part 2
+CREATE DATABASE DiabetesManagement;
+
+USE DiabetesManagement;
+
+CREATE TABLE Patients (
+    PatientID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100),
+    Age INT,
+    Gender VARCHAR(10),
+    Region VARCHAR(100),
+    DiagnosisDate DATE
+);
+
+CREATE TABLE Diagnoses (
+    DiagnosisID INT AUTO_INCREMENT PRIMARY KEY,
+    PatientID INT,
+    DiagnosisType VARCHAR(50),
+    DiagnosisDate DATE,
+    FOREIGN KEY (PatientID) REFERENCES Patients(PatientID)
+);
+
+CREATE TABLE Treatments (
+    TreatmentID INT AUTO_INCREMENT PRIMARY KEY,
+    PatientID INT,
+    TreatmentType VARCHAR(50),
+    StartDate DATE,
+    EndDate DATE,
+    FOREIGN KEY (PatientID) REFERENCES Patients(PatientID)
+);
+
+CREATE TABLE LifestyleFactors (
+    LifestyleID INT AUTO_INCREMENT PRIMARY KEY,
+    PatientID INT,
+    PhysicalActivityLevel VARCHAR(50),
+    DietaryHabits VARCHAR(50),
+    FOREIGN KEY (PatientID) REFERENCES Patients(PatientID)
+);
+
+CREATE TABLE Appointments (
+    AppointmentID INT AUTO_INCREMENT PRIMARY KEY,
+    PatientID INT,
+    AppointmentDate DATE,
+    DoctorName VARCHAR(100),
+    Notes TEXT,
+    FOREIGN KEY (PatientID) REFERENCES Patients(PatientID)
+);

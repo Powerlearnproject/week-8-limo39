@@ -1,0 +1,41 @@
+
+--Part 3: SQL Programming
+
+--Data Retrieval Queries
+--Retrieve all patients with diabetes:
+
+SELECT Name, Age, Gender, Region
+FROM Patients;
+
+--List all diagnoses for a specific patient:
+SELECT * FROM Diagnoses
+WHERE PatientID = 1;
+
+--Get all treatments and their duration for a specific patient:
+SELECT TreatmentType, StartDate, EndDate
+FROM Treatments
+WHERE PatientID = 1;
+
+--Find lifestyle factors of patients with Type 2 Diabetes:
+SELECT p.Name, l.PhysicalActivityLevel, l.DietaryHabits
+FROM Patients p
+JOIN Diagnoses d ON p.PatientID = d.PatientID
+JOIN LifestyleFactors l ON p.PatientID = l.PatientID
+WHERE d.DiagnosisType = 'Type 2 Diabetes';
+
+--Data Analysis Queries
+Average age of patients with Type 1 vs. Type 2 Diabetes:
+SELECT DiagnosisType, AVG(p.Age) AS AvgAge
+FROM Patients p
+JOIN Diagnoses d ON p.PatientID = d.PatientID
+GROUP BY DiagnosisType;
+
+--Count of patients by region:
+SELECT Region, COUNT(*) AS PatientCount
+FROM Patients
+GROUP BY Region;
+
+--Number of treatments initiated in the last year:
+SELECT COUNT(*) AS TreatmentCount
+FROM Treatments
+WHERE StartDate >= DATE_SUB(CURDATE(), INTERVAL 1 YEAR);
